@@ -1,6 +1,8 @@
 # Backpack Dropzone field
 
-Add Dropzone support for [Laravel Backpack](https://laravel-backpack.readme.io/docs).
+Add Dropzone support for ***< 4.0*** [Laravel Backpack](https://laravel-backpack.readme.io/docs).
+
+This is a fork of [Backpack Dropzone field](https://github.com/Gaspertrix/laravel-backpack-dropzone-field) that only adds support to the older versions.
 
 ## Requirements
 - [Laravel Backpack](https://laravel-backpack.readme.io/docs)
@@ -21,9 +23,14 @@ Currently, you can only manage media while editing an entry.
 composer require gaspertrix/laravel-backpack-dropzone-field
 ```
 
-Publish assets:
+Publish assets (without the install command):
 ``` bash
-php artisan gaspertrix:backpack:dropzone:install
+php artisan vendor:publish --provider="Gaspertrix\Backpack\DropzoneField\DropzoneFieldServiceProvider" --tag="public"
+```
+
+Publish views (without the install command):
+```bash
+php artisan vendor:publish --provider="Gaspertrix\Backpack\DropzoneField\DropzoneFieldServiceProvider" --tag="views"
 ```
 
 ## Usage
